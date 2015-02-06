@@ -1,0 +1,18 @@
+PostMessage (in "pure windows programming", aka win32 API) is asynchronous, i.e.
+Places (posts) a message in the message queue associated with the thread that 
+created the specified window and returns without waiting for the thread to
+process the message.To post a message in the message queue associated with a
+thread, use the PostThreadMessage function.
+
+a window created by a thread so PostMessage we sending to a window so it check who is created it
+that thread message queue it put
+
+SendMessage is synchronous, that is, again quoting:
+
+Sends the specified message to a window or windows. The SendMessage function 
+calls the window procedure for the specified window and does not return until
+the window procedure has processed the message.
+
+To send a message and return immediately, use the SendMessageCallback or SendNotifyMessage function.
+To post a message to a thread's message queue and return immediately, use the PostMessage or
+PostThreadMessage function.
